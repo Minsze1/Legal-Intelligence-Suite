@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Docket Watch — Kansas Legal Intelligence Suite</title>
-  <meta name="description" content="Docket Watch is a Kansas CINC legal intelligence platform — AI-powered analysis, motion drafting, and appellate strategy for pro se parents fighting to bring their children home."/>
+  <title>Docket Watch — Legal Intelligence Suite</title>
+  <meta name="description" content="Docket Watch is a CINC legal intelligence platform — AI-powered analysis, motion drafting, and appellate strategy for pro se parents fighting to bring their children home."/>
 
   <!-- React + ReactDOM -->
   <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
@@ -118,7 +118,7 @@
 <div id="key-gate">
   <div class="key-card">
     <div class="key-logo">◈ Docket Watch</div>
-    <div class="key-title">Kansas Legal Intelligence Suite</div>
+    <div class="key-title">Legal Intelligence Suite</div>
     <div class="key-desc">
       AI-powered CINC analysis, motion drafting, and appellate strategy for pro se parents fighting to bring their children home.<br/><br/>
       Enter your Anthropic API key to continue. Your key is stored in this browser session only and never sent anywhere except directly to Anthropic.
@@ -336,7 +336,7 @@ OUTPUT FORMAT:
 [APPELLATE_SUCCESS]...[/APPELLATE_SUCCESS]
 [VACATE_FRAMEWORK]...[/VACATE_FRAMEWORK]`;
 
-const THEORY_SYSTEM_1 = `You are a Kansas CINC appellate litigation strategist evaluating a legal theory.
+const THEORY_SYSTEM_1 = `You are a CINC appellate litigation strategist evaluating a legal theory.
 
 1. FRAMEWORK FIT: Does this theory fit within K.S.A. 38-2201 et seq. CINC or Kansas appellate framework? Rate: Strong Fit / Partial Fit / Off-Frame.
 2. IN MOTION CHECK: Is this theory already present in the appeal motion provided? Answer YES or NO explicitly.
@@ -353,7 +353,7 @@ If not beneficial or already in motion:
 
 Be direct. Do not pad.`;
 
-const THEORY_SYSTEM_2 = `You are a Kansas CINC appellate research specialist doing deep-dive research.
+const THEORY_SYSTEM_2 = `You are a CINC appellate research specialist doing deep-dive research.
 
 1. UNPUBLISHED OPINIONS: Kansas COA unpublished opinions (2020–2026) touching this theory. Cite case name, docket number, date if known.
 2. RECENT PUBLISHED OPINIONS (2024–2026): Any new KSC or COA published opinion changing the landscape?
@@ -952,7 +952,7 @@ ${result1}`, 3000);
 
   return (
     <div className="theory-wrap">
-      <div className="theory-label">Propose a legal theory for evaluation against the Kansas CINC framework</div>
+      <div className="theory-label">Propose a legal theory for evaluation against the CINC framework</div>
       <textarea className="theory-input" value={theory} onChange={e=>setTheory(e.target.value)}
         placeholder="e.g. The district court's reliance on the January 2026 proffer as the sole basis for the unfitness finding violates In re A.K. and constitutes reversible error…"/>
       <button className="btn-run btn-t" disabled={!theory.trim()||running1} onClick={run1}>
@@ -1337,7 +1337,7 @@ Analyze using the full protocol.`;
     <div className="app">
       <style>{styles}</style>
       <div className="header">
-        <div className="header-title">◈ Kansas Legal Intelligence Suite</div>
+        <div className="header-title">◈ Legal Intelligence Suite</div>
         <div className="header-sub">CINC · K.S.A. 38-2201 et seq. · Appellate & District Analysis · Motion Drafting</div>
       </div>
       <div className="primary-tabs">
@@ -1396,7 +1396,7 @@ Analyze using the full protocol.`;
           />
         )}
       </div>
-      <div className="footer">Kansas Legal Intelligence Suite · All outputs for research purposes only · Verify all citations before filing</div>
+      <div className="footer">Legal Intelligence Suite · All outputs for research purposes only · Verify all citations before filing</div>
     </div>
   );
 }
